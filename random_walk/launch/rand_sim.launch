@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<node name="random_walk" pkg="random_walk" type="random_walk" output="screen">
+        <remap from="robot_pose_ekf/odom" to="odom"/>
+		<param name="min_dist" type="double" value="0.8"/>
+		<param name="view_angle" type="int" value="90"/>
+		<param name="robot_width" type="double" value="0.9"/>
+		<param name="linear_vel" type="double" value="0.1"/>
+		<param name="angular_vel" type="double" value="0.1"/>
+		<param name="sensor_frame_id" type="str" value="/laser_link"/>
+		<param name="real_flag" type="bool" value="0"/>
+	</node>
+</launch>
